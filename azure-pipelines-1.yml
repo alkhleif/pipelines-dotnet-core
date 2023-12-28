@@ -50,7 +50,7 @@ steps:
     modifyOutputPath: false
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Build.ArtifactStagingDirectory)/webApp' 
+    targetPath: '$(Build.ArtifactStagingDirectory)' 
     artifactName: 'webApp'
 
  
