@@ -45,7 +45,7 @@ steps:
   inputs:
     command: publish
     publishWebProjects: false
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)  --no-rstore --no-bulid'
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
     modifyOutputPath: false
 - task: PublishPipelineArtifact@1
