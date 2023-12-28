@@ -23,7 +23,7 @@ steps:
     performMultiLevelLookup: true
     includePreviewVersions: true # Required for preview versions
 - task: DotNetCoreCLI@2
-  displayName 'testtt'
+  displayName :'testtt'
   inputs:
     command: 'restore'
     feedsToUse: 'select'
