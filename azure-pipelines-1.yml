@@ -20,15 +20,14 @@ steps:
 - task: UseDotNet@2
   displayName: 'Install .NET Core SDK'
   inputs:
-    version: '5.x'
+    version: '2.2.x'
     performMultiLevelLookup: true
     includePreviewVersions: true # Required for preview versions
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
-    projects: '$(projectsToBulid)'
     feedsToUse: 'select'
-    includeNuGetOrg: false
+    vstsFeed: 'my-vsts-feed' 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build $(buildConfiguration)'
   inputs:
